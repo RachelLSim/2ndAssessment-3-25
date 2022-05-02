@@ -1,8 +1,7 @@
 {
   "name": "assessment-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,5 +11,15 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.3"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RachelLSim/4thAssessment-3-25.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RachelLSim/4thAssessment-3-25/issues"
+  },
+  "homepage": "https://github.com/RachelLSim/4thAssessment-3-25#readme",
+  "description": ""
 }

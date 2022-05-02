@@ -1,15 +1,13 @@
 const express = require("express");
 const cors = require("cors");
+const { getTasks  } = require('/controller.js')
 
 const app = express();
 
-// const toDoListDisplay = responseSection
-
 app.use(cors());
+app.use(express.json());
 
-app.use(express.json()); // When we want to be able to accept JSON.
-
-//get random compliment
+//get random compliment///////////////
 app.get("/api/compliment", (req, res) => {
   const compliments = ["Gee, you're a smart cookie!",
 					 "Cool shirt!",
@@ -20,7 +18,7 @@ app.get("/api/compliment", (req, res) => {
   res.status(200).send(randomCompliment);
 });
 
-//get random fortune
+//get random fortune/////////////
 app.get("/api/fortune", (req, res) => {
   const fortunes = [
     "Love truth, but pardon error.",
@@ -35,11 +33,27 @@ app.get("/api/fortune", (req, res) => {
   res.status(200).send(randomFortune);
 })
 
-// // add to to-do list
-// app.post("/api/addToDo", (req, res) => {
-//   let newItem = req.body
-//         toDoList.push(toDoListDisplay)
-//         res.status(200).send(toDoListDisplay)
+
+//to-do list////////////////////////////////////////////////////
+app.get('/api/toDo', getTasks)
+
+
+
+
+
+
+
+
+
+
+
+// add to to-do list
+// app.post("/api/toDo",  => {
+  // let newItem = req.body
+  //       newItem.push(toDoListDisplay)
+  //       res.status(200).send(toDoListDisplay)
+
+  //       //I need to add and increment global id. Do I need a loop here?
 // })
 
 
