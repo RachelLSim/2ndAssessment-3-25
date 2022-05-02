@@ -1,4 +1,4 @@
-const getSubmit = document.getElementById("form")
+const form = document.getElementById("form")
 let responseSection = document.getElementById("responseSection")
 
 
@@ -60,4 +60,4 @@ form.addEventListener('submit', submitHandler)
 
 window.addEventListener('DOMContentLoaded', )
 
-                           
+getAllListItems()
